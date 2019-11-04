@@ -1,0 +1,59 @@
+.body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20.3vh 53.3vh 23.3vh;
+  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-areas: 
+  ' . . temp '
+  ' .  time . '
+  ' quote quote  quote '
+  ;
+  background-size: cover;
+  background-position: center;
+  color: whitesmoke;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.wether {
+justify-self: center;
+  grid-area: temp;
+}
+
+.temp {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.time  {
+  grid-area: time;
+  justify-self: center;
+  align-self: center;
+}
+
+#time {
+  font-size: 6em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#greeting{
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.quote{
+  grid-area: quote;
+  justify-self: center;
+  align-self: center;
+  font-size: 2em;
+  text-align: center;
+}

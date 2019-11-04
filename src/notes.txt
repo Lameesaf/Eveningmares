@@ -1,0 +1,8 @@
+Component 
+  - ~App
+    -~ list input
+      -~ lists
+        -~ list
+    -
+    -
+    -error page
