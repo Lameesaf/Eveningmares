@@ -5,18 +5,23 @@ import Search from './Component/Jikan/Search'
 import './App.css';
 import Momentum from './Component/Momentum/Momentum'
 import Joke from './Component/Joke/Joke';
+import "bootstrap/dist/css/bootstrap.css";
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
 function App() {
 
   return (
     <Router>
-    <nav className= 'App'>
-      <Link to='/'>Home Page</Link>{'   '}
-      <Link to='/Search'>free time?</Link>{'   '}
-      <Link to='/ListInput'>list</Link>{'   '}
-      <Link to='/Joke'>feeling sad?</Link>{'   '}
-      {/* <Link to='/FavoriteFood'>Favorite Food</Link> */}
-    </nav>
+    <Navbar className=" justify-content-center" fill justify bg="dark" variant="dark">
+    <Nav>
+      <Nav.Link><Link to='/'>Home Page</Link></Nav.Link>
+      <Nav.Link><Link to='/Search'>free time?</Link></Nav.Link>
+      <Nav.Link><Link to='/ListInput'>list</Link></Nav.Link>
+      <Nav.Link><Link to='/Joke'>feeling sad?</Link></Nav.Link>
+    </Nav>
+  </Navbar>
+
     <div className= 'App'>
       <Switch>
       <Route exact path='/' component={Momentum}></Route>

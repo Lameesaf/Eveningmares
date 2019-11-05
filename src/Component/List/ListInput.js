@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Lists from './Lists'
+// import { Button } from 'react-bootstrap';
+import { Button } from 'antd';
+
 export default class ListInput extends Component {
 
   constructor(props) {
@@ -83,10 +86,10 @@ export default class ListInput extends Component {
         />
         <form>
           <input type='text' value={this.state.textArea} onChange={(e) => this.handleChange(e)} />
-          <button onClick={(e) => this.handleClick(e)}>one more</button>
+          <Button size="sm" onClick={(e) => this.handleClick(e)}>one more</Button>
         </form>
-        <button onClick={(e) => this.clearMarkedItem(e)}>clear marked</button>
-        <button onClick={(e) => this.clearList(e)}>Finished the list!</button>
+        <Button size="sm" type="dashed"  onClick={(e) => this.clearMarkedItem(e)}>clear marked</Button>
+        <Button size="sm" type="dashed"  onClick={(e) => this.clearList(e)}>Finished the list!</Button>
       </div>
     )
   }

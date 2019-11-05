@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {DropdownButton} from 'react-bootstrap/DropdownButton'
 export default function Dropdown(props) {
   const list = props.dropdownList.map((choice,index)=>{
     if(props.searchWay ==='genre'){

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ListGroup from 'react-bootstrap/ListGroup'
 
 export default class ListItem extends Component {
   constructor (props){
@@ -28,13 +29,13 @@ export default class ListItem extends Component {
   }
   render() {
     return (
-      <li>
+      <ListGroup.Item action variant="info">
         <input type='text' value={this.state.item} onChange={(e)=>this.handleChange(e)}/>
         {/* <p className="material-icons" onClick={this.handleDelete}>delete_forever</p> */}
         <p className="material-icons" onClick={this.handleDelete}>close</p>
         <p className="material-icons" onClick={this.props.markedItem}>{(this.props.isMarked) ? 'done' : 'done_outline'}</p>
 
-      </li>
+      </ListGroup.Item>
     )
   }
 }

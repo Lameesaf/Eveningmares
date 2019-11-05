@@ -8,6 +8,7 @@ import { Types, Genre } from '../Dropdown/DropdownDB'
 import GenreInput from './GenreInput'
 import SearchWay from './searchWay'
 import PrintResult from './PrintResult'
+import Container from 'react-bootstrap/Container'
 // dotenv.config()
 
 
