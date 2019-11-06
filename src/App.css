@@ -1,39 +1,42 @@
-.body{
-  background-color: #c091a0;
-
-}
 
 .menu-item {
-  background-color: #d4a1a1 ;
+  background-color: #c091a0 ;
   height: auto;
    text-align: center ;
    width:80px ;
    padding:0; 
    margin: 0px 5px;
-}
-
-.ant-menu-horizontal > .ant-menu-item-selected {
-background-color: #e6b9ad;
-  color: #c091a0
-}
-
-.ant-row.ant-form-item{
-color: #b1859b;
-margin: 15px 2px;
-
-}
-
-.ant-dropdown-link:hover{
-  color: #e6caad;
-}
-ant-dropdown-link.ant-dropdown-link{
-  margin: 15px 2px;
   }
+  input{
+    background-color: #b1859b;
+    color: #e6b9ad;
+    border: 2px solid #d4a1a1;
+  }
+
+  
+  
+  
+  .ant-row.ant-form-item{
+    color: #b1859b;
+  
+  }
+  
+  .ant-dropdown-link :hover{
+    color: #e6caad;
+  }
+  ant-dropdown-link.ant-dropdown-link{
+  margin: 15px 2px;
+}
 
   .ant-form>div , .list ,.form{
     text-align: center;
-    margin: 10px;
-
+    
+  }
+  .ant-form{
+    margin: 15px 2px;
+    display: flex;
+    justify-content: center;
+  
   }
   .ul{
     display: flex;
@@ -44,7 +47,7 @@ ant-dropdown-link.ant-dropdown-link{
   .div{
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin: 10px;
   }
   .list-group-item.list-group-item{
     width: fit-content;
@@ -56,8 +59,17 @@ ant-dropdown-link.ant-dropdown-link{
     background-color: #d4a1a1;
     color: #e6caad;
     width: 70vw;
-    margin: auto;
+    margin: 10px auto;
     border: 2px solid #c091a0;
+  }
+  
+  .fave-joke{
+    text-align: center;
+    background-color: #b1859b;
+    color: #e6b9ad;
+    width: 70vw;
+    margin: 10px auto;
+    border: 2px solid #d4a1a1;
   }
   .list-group-item.list-group-item:hover{
     background-color: #d4a1a1;
@@ -68,17 +80,24 @@ ant-dropdown-link.ant-dropdown-link{
   .done.list-group-item:hover{
     background-color: #c091a0;
   }
-
+  
   .list-group-item.list-group-item >input{
     width: fit-content;
-  border: none;
-  border-radius: 4px;
+    border: none;
+    border-radius: 4px;
   }
   .button{
     margin: 5px;
-
+    
   }
-.ant-form-item-control{
-  margin: 15px 2px;
-
-}
+  .ant-menu-horizontal > .ant-menu-item > a{
+      color: #e6b9ad;
+    }
+    .ant-menu-horizontal > .ant-menu-item > a:hover{
+      color: #b1859b;
+    }
+                  .ant-menu-horizontal > .ant-menu-item-selected >a {
+                    background-color: #e6b9ad;
+                  color: #b1859b;
+                  height: fit-content;
+                  }
