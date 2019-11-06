@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as HashRouter, Route, Link, Switch } from 'react-router-dom'
 import ListInput from './Component/List/ListInput'
 import Search from './Component/Jikan/Search'
 import './App.css';
@@ -15,7 +15,7 @@ function App() {
   return (
     <Layout style={{ height: '100vh', backgroundColor: '#b1859b	' }}>
 
-      <Router>
+      <HashRouter basename='/eveningmares'>
         <Header style={{ backgroundColor: 'lightGray', width: '100vw' }}>
           <Menu
             mode="horizontal"
@@ -40,7 +40,7 @@ function App() {
           </div>
         </Content>
         </Switch>
-      </Router>
+      </HashRouter>
     </Layout>
   );
 }
