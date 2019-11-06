@@ -7,7 +7,7 @@ import { Types, Genre } from '../Dropdown/DropdownDB'
 import GenreInput from './GenreInput'
 import SearchWay from './searchWay'
 import PrintResult from './PrintResult'
-import { Form, Input, Button } from 'antd';
+import { Form } from 'antd';
 
 export default class Search extends Component {
 
@@ -120,7 +120,7 @@ export default class Search extends Component {
 
           
         </Form>
-        {this.state.result.length > 0 ? <PrintResult type={this.state.type} searchWay={this.state.searchWay} results={this.state.result} /> : false}
+        {this.state.result.length > 0 ? <PrintResult watchLater={this.props.watchLater} toggleWatchLater={this.props.toggleWatchLater} type={this.state.type} searchWay={this.state.searchWay} results={this.state.result} /> : false}
 </div>
     )
   }
