@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PrintJoke from './PrintJoke'
-import PrintFaveJoke from './PrintFaveJoke'
+import FaveJokes from './FaveJokes'
+import { Button } from 'antd';
+
 
 
 export default class JokeList extends Component {
@@ -10,26 +12,40 @@ export default class JokeList extends Component {
       favejokes: []
     }
   }
-  showFave = () => {
-    if (this.props.faveJokes.length > 0) {
+  // showFave = () => {
+  //   if (this.state.favejokes.length > 0) {
+  //     this.setState({
+  //       favejokes: this.props.faveJokes.map((faveJoke, index) => {
+  //         return <PrintFaveJoke faveJoke={faveJoke} key={index} />
+  //       })
+  //     })
+  //   }
+  // }
+
+  handleFaveJoke=(faveJoke)=>{
+    const faveJokes = [...this.state.favejokes]
+    const index = faveJokes.indexOf(faveJoke)
+    if(index!==-1){
+    
+    }else{
       this.setState({
-        favejokes: this.props.faveJokes.map((faveJoke, index) => {
-          return <PrintFaveJoke faveJoke={faveJoke} key={index} />
-        })
+        favejokes: [...this.state.favejokes,faveJoke]
       })
     }
   }
+
+  clearFaveJoke=(e)=>{
+  this.setState({
+    favejokes: []
+  })}
   render() {
 
     return (
-      <div>
+      <div style={{textAlign: 'center', margin: '5px'}}>
+        <PrintJoke joke={this.props.joke} addFave={this.handleFaveJoke} />
+        {this.state.favejokes.length>0 ? <FaveJokes faveJoke={this.state.favejokes}/>:false}
+      <Button onClick={this.clearFaveJoke}>clear</Button>
 
-        <PrintJoke showFave={this.showFave} joke={this.props.joke} addFave={(e) => this.props.addFave(this.props.joke)} faveJokes={this.props.faveJokes} />
-        {console.log(this.state.favejokes)}
-        {this.state.favejokes ? console.log(this.state.favejokes) && this.state.favejokes.map(joke=>{
-          console.log(joke)
-          return joke
-        }) : false}
       </div>
     )
   }

@@ -11,8 +11,7 @@ export default class Joke extends Component {
       joke: '',
       setup: '',
       delivery: '',
-      category: ''},
-    faveJokes: []}
+      category: ''}}
   }
   printJoke = (joke) => {
     console.log(joke)
@@ -34,35 +33,14 @@ export default class Joke extends Component {
       }
       console.log(this.state.joke)
   }
-  handleFaveJoke=(faveJoke)=>{
-    const faveJokes = [...this.state.faveJokes]
-    const index = faveJokes.indexOf(faveJoke)
-    if(index!==-1){
-    
-    }else{
-      this.setState({
-        faveJokes: [...this.state.faveJokes,faveJoke]
-      })
-    }
-  }
-
-  clearFaveJoke=(e)=>{
-  this.setState({
-    faveJokes: []
-  })
-}
 
   render() {
     return (
       <div>
         <JokeApi  printJoke={this.printJoke} />
         {console.log(this.state.joke.joke !== '')}
-      {this.state.joke.joke !== '' ? <JokeList joke={this.state.joke} faveJokes={this.state.faveJokes} addFave={this.handleFaveJoke}/> :false}
+      {this.state.joke.joke !== '' ? <JokeList joke={this.state.joke} /> :false}
         
-
-      {console.log(this.state.faveJokes)}
-      {this.state.faveJokes.length>0 ? <JokeList faveJokes={this.state.faveJokes} addFave={this.state.faveJokes}/> :false}
-      <button onClick={this.clearFaveJoke}>clear</button>
       </div>
     )
   }
