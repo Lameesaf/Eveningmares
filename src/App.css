@@ -91,13 +91,13 @@
     
   }
   .ant-menu-horizontal > .ant-menu-item > a{
-      color: #e6b9ad;
-    }
-    .ant-menu-horizontal > .ant-menu-item > a:hover{
-      color: #b1859b;
-    }
-                  .ant-menu-horizontal > .ant-menu-item-selected >a {
-                    background-color: #e6b9ad;
-                  color: #b1859b;
-                  height: fit-content;
-                  }
+     color: #e6b9ad;
+  }
+  .ant-menu-horizontal > .ant-menu-item > a:hover{
+    color: #b1859b;
+  }
+  .ant-menu-horizontal > .ant-menu-item-selected >a {
+    background-color: #e6b9ad;
+    color: #b1859b;
+    height: fit-content;
+  }
