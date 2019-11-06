@@ -10,7 +10,7 @@ export default function PrintManga(props) {
   const [open, setOpen] = useState(false);
   
   let md =0;
-  {props.length > 3 ? md=3 : md=5}
+  {props.length > 1 ? props.length > 3 ? md=3 : md=5: md=12}
   return (
     <Col md={md}  >
         <Card  onClick={() => setOpen(!open)}
@@ -34,9 +34,12 @@ export default function PrintManga(props) {
                 : new Date(props.result.publishing_start).getFullYear()}</ListGroup.Item>
               <ListGroup.Item>{props.result.type}</ListGroup.Item>
             </ListGroup> 
-              <Card.Link href={props.result.url}>{props.result.title}</Card.Link>
             </Card.Body>
             </Collapse>
+            <Card.Body>
+              <Card.Link href={props.result.url}>{props.result.title}</Card.Link>
+              </Card.Body>
+            <Card.Text className="material-icons" style={{cursor: "pointer"}} onClick={props.toggleWatchLater}>{(props.isThere) ? 'remove_circle' : 'watch_later'}</Card.Text>
         </Card>
     </Col>
   )

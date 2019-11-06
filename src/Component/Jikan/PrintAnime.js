@@ -25,7 +25,6 @@ export default function PrintAnime(props) {
             <ListGroup className="list-group-flush">
               <ListGroup.Item>{props.result.episodes}</ListGroup.Item>
               <ListGroup.Item>{props.result.score}</ListGroup.Item>
-              {console.log(props.result)}
               {props.result.hasOwnProperty('volumes') ? false :
               <ListGroup.Item>{props.result.hasOwnProperty('rated') ? `rate: ${props.result.rated}` : `genre: ${props.result.genres.map(genre => {
                 return genre.name
@@ -40,6 +39,7 @@ export default function PrintAnime(props) {
             <Card.Body>
               <Card.Link href={props.result.url}>{props.result.title}</Card.Link>
             </Card.Body>
+              <Card.Text className="material-icons" style={{cursor: "pointer"}} onClick={props.toggleWatchLater}>{(props.isThere) ? 'remove_circle' : 'watch_later'}</Card.Text>
 
         </Card>
     </Col>
