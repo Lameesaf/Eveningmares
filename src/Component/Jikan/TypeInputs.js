@@ -3,7 +3,7 @@ import Dropdown from '../Dropdown/Dropdown'
 export default function TypeInputs(props) {
   return (
     <div>
-    <Dropdown dropdownHandle={props.dropdownHandle} dropdownList={props.type}/>
+    <Dropdown type='Choose category' dropdownHandle={props.dropdownHandle} dropdownList={props.type}/>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { API_KEY } from '../../api'
 import Dropdown from '../Dropdown/Dropdown'
 import {Categories} from '../Dropdown/DropdownDB'
+import { Button } from 'antd';
 export default class JokeApi extends Component {
       constructor(props){
         super()
@@ -30,9 +31,9 @@ export default class JokeApi extends Component {
 
   render() {
     return (
-      <div>
+      <div className='div'>
         <Dropdown dropdownHandle={this.dropdownHandle} dropdownList={Categories}/>
-          <button onClick={this.searchHandle}>search</button>
+          <Button className='button'  type="primary" onClick={this.searchHandle}>Search</Button>
       </div>
     )
   }

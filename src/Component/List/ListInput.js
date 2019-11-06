@@ -78,18 +78,18 @@ export default class ListInput extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='list'>
         <Lists lists={this.state.lists} 
         deleteItem = {this.handleDelete} 
         markedItem={this.handleFinishItem}
         markedItems={this.state.markedItems}
         />
-        <form>
+        <form className='form'>
           <input type='text' value={this.state.textArea} onChange={(e) => this.handleChange(e)} />
-          <Button size="sm" onClick={(e) => this.handleClick(e)}>one more</Button>
+          <Button className='button'  type='primary' onClick={(e) => this.handleClick(e)}>one more</Button>
         </form>
-        <Button size="sm" type="dashed"  onClick={(e) => this.clearMarkedItem(e)}>clear marked</Button>
-        <Button size="sm" type="dashed"  onClick={(e) => this.clearList(e)}>Finished the list!</Button>
+        <Button className='button'  type="primary"  onClick={(e) => this.clearMarkedItem(e)}>clear marked</Button>
+        <Button className='button' type="dashed"  onClick={(e) => this.clearList(e)}>Finished the list!</Button>
       </div>
     )
   }

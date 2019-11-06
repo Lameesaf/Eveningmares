@@ -1,22 +1,84 @@
-.App {
-  text-align: center;
+.body{
+  background-color: #c091a0;
+
 }
 
-.App-logo {
-  height: 40vmin;
+.menu-item {
+  background-color: #d4a1a1 ;
+  height: auto;
+   text-align: center ;
+   width:80px ;
+   padding:0; 
+   margin: 0px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ant-menu-horizontal > .ant-menu-item-selected {
+background-color: #e6b9ad;
+  color: #c091a0
 }
 
-.App-link {
-  color: #09d3ac;
+.ant-row.ant-form-item{
+color: #b1859b;
+margin: 15px 2px;
+
+}
+
+.ant-dropdown-link:hover{
+  color: #e6caad;
+}
+ant-dropdown-link.ant-dropdown-link{
+  margin: 15px 2px;
+  }
+
+  .ant-form>div , .list ,.form{
+    text-align: center;
+    margin: 10px;
+
+  }
+  .ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .list-group-item.list-group-item{
+    width: fit-content;
+    margin: 2px;
+    background-color: #c091a0;
+  }
+  .joke{
+    text-align: center;
+    background-color: #d4a1a1;
+    color: #e6caad;
+    width: 70vw;
+    margin: auto;
+    border: 2px solid #c091a0;
+  }
+  .list-group-item.list-group-item:hover{
+    background-color: #d4a1a1;
+  }
+  .done.list-group-item{
+    background-color: #d4a1a1;
+  }
+  .done.list-group-item:hover{
+    background-color: #c091a0;
+  }
+
+  .list-group-item.list-group-item >input{
+    width: fit-content;
+  border: none;
+  border-radius: 4px;
+  }
+  .button{
+    margin: 5px;
+
+  }
+.ant-form-item-control{
+  margin: 15px 2px;
+
 }

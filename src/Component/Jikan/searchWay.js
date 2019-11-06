@@ -1,10 +1,14 @@
 import React from 'react'
+import { Form, Radio } from 'antd';
 
 export default function searchWay(props) {
   return (
-    <form onChange={(e)=>props.searchWayHandle(e)}>
-      <label><input checked={props.searchWay === 'name'} type="radio" value='name'/>Name</label>
-      <label><input checked={props.searchWay === 'genre'} type="radio" value='genre'/>Genre</label>
-        </form>
+    <Form.Item  >
+            <Radio.Group defaultValue="name" onChange={(e)=>props.searchWayHandle(e)}>
+              <Radio.Button value="name">Name</Radio.Button>
+              <Radio.Button value="genre">Genre</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+
   )
 }

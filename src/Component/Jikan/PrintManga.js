@@ -25,9 +25,10 @@ export default function PrintManga(props) {
             <ListGroup className="list-group-flush">
               <ListGroup.Item>volumes: {props.result.volumes}</ListGroup.Item>
               <ListGroup.Item>score: {props.result.score}</ListGroup.Item>
+              {props.result.hasOwnProperty('episodes') ? false :
               <ListGroup.Item>{props.result.hasOwnProperty('chapters') ? `chapters: ${props.result.chapters}` : `genre: ${props.result.genres.map(genre => {
                 return genre.name
-              }).join(',  ')}`}</ListGroup.Item>
+              }).join(',  ')}`}</ListGroup.Item>}
               <ListGroup.Item>{props.searchWay === 'name'
                 ? props.result.publishing  ? new Date(props.result.start_date).getFullYear() : `${new Date(props.result.start_date).getFullYear()} - ${new Date(props.result.end_date).getFullYear()}`
                 : new Date(props.result.publishing_start).getFullYear()}</ListGroup.Item>

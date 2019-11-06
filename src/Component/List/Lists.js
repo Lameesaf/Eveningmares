@@ -4,7 +4,6 @@ import ListItem from './ListItem'
 export default function Lists(props) {
   const allItem = props.lists.map((item,index)=>{
     return <ListItem 
-    // {...console.log(item)}
     item={item}
     deleteItem={()=>props.deleteItem(item)}
     markedItem={()=>props.markedItem(item)}
@@ -12,7 +11,7 @@ export default function Lists(props) {
     key={index} />
   })
   return (
-    <ul>
+    <ul className='ul'>
       {allItem}
     </ul>
   )

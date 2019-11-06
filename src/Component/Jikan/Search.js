@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import dotenv from 'dotenv';
 import axios from 'axios';
 import { API_KEY } from '../../api'
 import NameInput from './NameInput';
@@ -8,9 +7,7 @@ import { Types, Genre } from '../Dropdown/DropdownDB'
 import GenreInput from './GenreInput'
 import SearchWay from './searchWay'
 import PrintResult from './PrintResult'
-import Container from 'react-bootstrap/Container'
-// dotenv.config()
-
+import { Form, Input, Button } from 'antd';
 
 export default class Search extends Component {
 
@@ -38,8 +35,10 @@ export default class Search extends Component {
   }
 
   typeDropdownHandle = (e) => {
+    console.log('hi')
     this.setState({
-      type: e.target.value
+      type: e.target.value,
+      result: []
     })
     if (e.target.value === 'character') {
       this.setState({
@@ -50,7 +49,8 @@ export default class Search extends Component {
 
   genreDropdownHandle = (e) => {
     this.setState({
-      genre: e.target.value
+      genre: e.target.value,
+      result: []
     })
   }
 
@@ -107,8 +107,9 @@ export default class Search extends Component {
   }
   render() {
     return (
-      <div>
-        <TypeInputs dropdownHandle={this.typeDropdownHandle} type={Types.type} />
+      <Form layout='inline' style={{textAlign: 'center'}}>
+          
+          <TypeInputs dropdownHandle={this.typeDropdownHandle} type={Types.type} />
         {this.state.type !== 'character'
           ? <SearchWay searchWay={this.state.searchWay} searchWayHandle={this.searchWayHandle} />
           : false}
@@ -117,7 +118,9 @@ export default class Search extends Component {
           : <GenreInput searchWay={this.state.searchWay} type={this.state.type} searchHandle={this.searchHandle} dropdownHandle={this.genreDropdownHandle} genre={Genre.genre} />}
 
         {this.state.result.length > 0 ? <PrintResult type={this.state.type} searchWay={this.state.searchWay} results={this.state.result} /> : false}
-      </div>
+          
+        </Form>
+
     )
   }
 }

@@ -1,6 +1,6 @@
 .body {
-  height: 100%;
-  width: 100%;
+  height: calc(100vh - 64px);
+  width: 100vw;
   display: grid;
   grid-template-rows: 20.3vh 53.3vh 23.3vh;
   grid-template-columns: 20vw 60vw 20vw;

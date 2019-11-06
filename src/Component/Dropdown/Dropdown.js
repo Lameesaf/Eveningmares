@@ -1,5 +1,6 @@
+
 import React from 'react'
-import {DropdownButton} from 'react-bootstrap/DropdownButton'
+import { Form} from 'antd';
 export default function Dropdown(props) {
   const list = props.dropdownList.map((choice,index)=>{
     if(props.searchWay ==='genre'){
@@ -15,10 +16,13 @@ export default function Dropdown(props) {
     list.pop()
   }}
   return (
-    <form onChange={(e) => { props.dropdownHandle(e) }}>
+    <Form.Item>
+      <form onChange={(e) => { props.dropdownHandle(e) }}>
     <select id="type">
       {list}
     </select>
-  </form>
+    </form>
+  </Form.Item>
   )
 }
+
