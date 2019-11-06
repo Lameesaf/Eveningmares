@@ -107,6 +107,7 @@ export default class Search extends Component {
   }
   render() {
     return (
+      <div>
       <Form layout='inline' style={{textAlign: 'center'}}>
           
           <TypeInputs dropdownHandle={this.typeDropdownHandle} type={Types.type} />
@@ -117,10 +118,10 @@ export default class Search extends Component {
           ? <NameInput name={this.state.name} searchHandle={this.searchHandle} handleChange={this.handleNameChange} />
           : <GenreInput searchWay={this.state.searchWay} type={this.state.type} searchHandle={this.searchHandle} dropdownHandle={this.genreDropdownHandle} genre={Genre.genre} />}
 
-        {this.state.result.length > 0 ? <PrintResult type={this.state.type} searchWay={this.state.searchWay} results={this.state.result} /> : false}
           
         </Form>
-
+        {this.state.result.length > 0 ? <PrintResult type={this.state.type} searchWay={this.state.searchWay} results={this.state.result} /> : false}
+</div>
     )
   }
 }

@@ -21,13 +21,11 @@ export default function printResult(props) {
     }
   })
   return (
-    <Container >
       <Row style={{  margin: 10}}>
         <CardDeck>
           {results}
         </CardDeck>
       </Row>
-    </Container>
 
   )
 }
