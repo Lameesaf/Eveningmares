@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { API_KEY } from '../../api'
 import Dropdown from '../Dropdown/Dropdown'
 import {Categories} from '../Dropdown/DropdownDB'
 import { Button } from 'antd';
