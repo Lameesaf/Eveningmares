@@ -11,7 +11,7 @@ export default function PrintCharacter(props) {
 
   console.log(props)
   let md =0;
-  {props.length > 3 ? md=3 : md=4}
+  {props.length > 1 ? props.length > 3 ? md=3 : md=5: md=12}
   return (
     props.result.hasOwnProperty("name") ?
     <Col md={md}>
@@ -29,9 +29,11 @@ export default function PrintCharacter(props) {
               <ListGroup.Item>Appearance: {props.result.anime.map(anime=>{
                 return anime.name}).join(', ')}</ListGroup.Item>
             </ListGroup> 
-              <Card.Link href={props.result.url}>{props.result.name}</Card.Link>
             </Card.Body>
             </Collapse>
+            <Card.Body>
+              <Card.Link href={props.result.url}>{props.result.name}</Card.Link>
+              </Card.Body>
         </Card>
     </Col>
     : false
