@@ -2,7 +2,7 @@
   height: calc(100vh - 64px);
   width: 100vw;
   display: grid;
-  grid-template-rows: 20.3vh 53.3vh 23.3vh;
+  grid-template-rows: 20.3vh 43.3vh 23.3vh;
   grid-template-columns: 20vw 60vw 20vw;
   grid-template-areas: 
   ' . . temp '
@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center;
   color: whitesmoke;
+  text-shadow: 2px 2px #b1859b;
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
