@@ -30,7 +30,8 @@ constructor(props){
         }
       }else{
         console.log(Number(moment(new Date()).format('h')) <=12 || Number(moment(new Date()).format('h')) <5)
-        if(Number(moment(new Date()).format('h')) <=12 || Number(moment(new Date()).format('h')) <5 ){
+        if(Number(moment(new Date()).format('h')) <=12){
+           if ( Number(moment(new Date()).format('h')) <5 ){
           this.setState({
             greeting:'Go to sleep,  Lamees'
           })        
@@ -39,7 +40,7 @@ constructor(props){
                 greeting:'Good morning,  Lamees'
               })
             }
-      }
+      }}
     }
 
   render() {
