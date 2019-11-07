@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Eveningmares/precache-manifest.425311616a162a7203c122b311662d80.js"
+  "/Eveningmares/precache-manifest.4c2f385aae6dd07ced09132eaedb0318.js"
 );
 
 workbox.clientsClaim();
