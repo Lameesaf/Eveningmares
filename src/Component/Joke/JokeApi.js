@@ -10,12 +10,13 @@ export default class JokeApi extends Component {
           category: 'Programming'
         }
       }
+      //take the category the user choose
       dropdownHandle=(e)=>{
         this.setState({
           category: e.target.value
         })
       }
-
+// git the joke from the API
   searchHandle =()=>{
     const baseURL= `https://sv443.net/jokeapi/category/${this.state.category}`
       axios({

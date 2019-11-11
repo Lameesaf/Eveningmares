@@ -18,6 +18,7 @@ export default class Weather extends Component {
         city: ''
     }
   }
+  // get the wether from the API
   componentWillMount(){
     axios({
       method: 'get',
@@ -30,6 +31,20 @@ export default class Weather extends Component {
         city: result.data.name
       })
     })
+    //update the weather every 10 minutes
+    setInterval(()=>{
+      axios({
+        method: 'get',
+        url: `https://api.openweathermap.org/data/2.5/weather?id=108410&units=metric&appid=${appid}`
+      })
+      .then (result=>{
+        this.setState({
+          icon: this.state[(result.data.weather[0].main).toLowerCase()],
+          temp: result.data.main.temp,
+          city: result.data.name
+        })
+      })
+    },(1000*60)*10)
   }
   render() {
     return (

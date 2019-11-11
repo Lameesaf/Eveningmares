@@ -11,6 +11,7 @@ constructor(props){
     author: ''
   }
 }
+//get a quote from API
   componentWillMount(){
     axios({
       method: 'get',

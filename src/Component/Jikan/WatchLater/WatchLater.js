@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row'
 export default function WatchLater(props) {
   console.log(props)
   const watchLater = props.watchLater.map((movie, index) => {
+    //check the type of the search to to the correct print component
     switch (props.type) {
       case 'anime':
         return <PrintAnime isThere={props.watchLater.includes(movie)} toggleWatchLater={(e)=>props.toggleWatchLater(movie,props.searchWay,props.type)} length={props.watchLater.length} searchWay={props.searchWay} result={movie} key={index} />

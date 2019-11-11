@@ -7,6 +7,7 @@ constructor(props){
   super()
 
 }
+//get a random image for the background
   componentWillMount(){
       // this.props.backgroundImage("https://images.unsplash.com/photo-1569492329917-eaddc4e71bc7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjY4OTUwfQ")
   axios({

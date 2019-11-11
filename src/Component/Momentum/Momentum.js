@@ -12,7 +12,7 @@ export default class Momentum extends Component {
       image: 'https://images.unsplash.com/photo-1572240347738-ab4967cd9641?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjY4OTUwfQ',
     }
   }
-  
+  //change the background image  from the API in Images component 
   backgroundImage=(backgroundImage)=>{
     this.setState({
       image: backgroundImage

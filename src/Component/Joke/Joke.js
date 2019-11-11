@@ -13,8 +13,10 @@ export default class Joke extends Component {
       delivery: '',
       category: ''}}
   }
+  //take the joke from the api and print it
   printJoke = (joke) => {
     console.log(joke)
+    //check if the joke is single line
     if (joke.type === 'single') {
       this.setState({
         joke:{
@@ -22,6 +24,7 @@ export default class Joke extends Component {
         category: joke.category,
         joke: joke.joke}
       })
+      //if the joke has 2 lines
     } else {
       this.setState({
         joke:{

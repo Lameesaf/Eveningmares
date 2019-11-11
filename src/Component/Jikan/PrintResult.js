@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row'
 export default function printResult(props) {
 
   const results = props.results.map((result, index) => {
+    //check the type of the search to to the correct print component
     switch (props.type) {
       case 'anime':
         return <PrintAnime isThere={props.watchLater.includes(result)} toggleWatchLater={(e)=>props.toggleWatchLater(result,props.searchWay,props.type)} length={props.results.length} searchWay={props.searchWay} result={result} key={index} />

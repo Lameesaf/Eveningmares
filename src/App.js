@@ -21,10 +21,11 @@ class App extends Component {
       type: ''
     }
   }
-
+// responsible for adding anime/manga to the watch later page
 toggleWatchLater =(something,searchWay,type)=>{
   const somethings = [...this.state.watchLater]
   const index = somethings.indexOf(something)
+  // if it's already in the list remove it
   if(index!==-1){
     somethings.splice(index,1)
     this.setState({
@@ -32,6 +33,7 @@ toggleWatchLater =(something,searchWay,type)=>{
       searchWay: searchWay,
       type:type
     })
+    //if it's not in the list add it
   }else{
     this.setState({
       watchLater: [...this.state.watchLater,something],
@@ -51,6 +53,7 @@ render(){
 
       <HashRouter basename='/eveningmares'>
         <Header style={{backgroundColor: 'white	',border: ' 10px solid #b1859b', width: '100vw', }}>
+          {/* nav bar */}
           <Menu
             mode="horizontal"
             style={{ backgroundColor: 'white', width: 'fit-content', lineHeight: '35px', margin: '3px'}}
@@ -62,6 +65,7 @@ render(){
             <Menu.Item className='menu-item' key="5"><Link className='link-item' to='/Joke'>feeling sad?</Link></Menu.Item>
           </Menu>
         </Header> <Switch>
+          {/* switch to other pages */}
             <Route exact path='/' component={Momentum}></Route>
         <Content style={{ padding: '0px',  overflow: 'scroll'}} >
         <div style={{ background: '#fff', margin: 20, minHeight: 280, height:'80vh', overflow: 'auto', border:'5px solid #b1859b' }}>

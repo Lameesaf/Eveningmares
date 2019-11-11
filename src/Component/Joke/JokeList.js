@@ -12,28 +12,22 @@ export default class JokeList extends Component {
       favejokes: []
     }
   }
-  // showFave = () => {
-  //   if (this.state.favejokes.length > 0) {
-  //     this.setState({
-  //       favejokes: this.props.faveJokes.map((faveJoke, index) => {
-  //         return <PrintFaveJoke faveJoke={faveJoke} key={index} />
-  //       })
-  //     })
-  //   }
-  // }
-
+//
   handleFaveJoke=(faveJoke)=>{
+    //make a copy from the favorite joke
     const faveJokes = [...this.state.favejokes]
+    //get the index of the clicked joke
     const index = faveJokes.indexOf(faveJoke)
-    if(index!==-1){
-    
-    }else{
-      this.setState({
+    //if the joke was not there
+    if(index===-1){
+      //add the joke
+    this.setState({
         favejokes: [...this.state.favejokes,faveJoke]
       })
     }
+    //if the joke was there do nothing
   }
-
+// delete all favorite joke
   clearFaveJoke=(e)=>{
   this.setState({
     favejokes: []
