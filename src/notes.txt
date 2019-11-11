@@ -1,8 +1,21 @@
-Component 
-  - ~App
-    -~ list input
-      -~ lists
-        -~ list
-    -
-    -
-    -error page
+                                                index
+                                                  |
+                                                 App
+                  ________________________________|________________________________________
+                  |          |                  |         |                |              |
+                Momentum   Dropdown           Jikan    Watch Later     list input        Joke
+                  |             |               |         |                |              |    
+    ______________|__________   ^            Search       |              lists       _____|__________
+    |       |       |       |   |___            |         v                |         |              |
+  Images  Time   Weather Quote      |           |         |               list    Joke Api      Joke list
+            &     _________>________|           |         |___________>______________               |
+        greeting  |       ______________________|_________________________          |           ____|__________
+                  |      |        |            |           |             |          v          |              | 
+                  ^ Name Input  Genre Input   Type Input   search way  Print result |       Print Joke     Fave Joke
+                  |_______<_________|______<______|                       |         |____>___________         |
+                                                                __________|_______________           |    Print Fave Joke
+                                                                |         |              |           |
+                                                          Print Anime  Print Manga  Print Character  |
+                                                                    |          |                     v
+                                                                    ^          ^                     |
+                                                                    |_____<____|____________<________| 
