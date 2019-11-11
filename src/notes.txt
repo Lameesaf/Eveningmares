@@ -1,6 +1,6 @@
                                                 index
                                                   |
-                                                 App
+                                                 App 
                   ________________________________|________________________________________
                   |          |                  |         |                |              |
                 Momentum   Dropdown           Jikan    Watch Later     list input        Joke
