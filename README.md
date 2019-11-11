@@ -35,4 +35,4 @@ React came out easily but the css was a nightmare
 ## future plan
 make it responsive
 
-### [Demo](https://lameesaf.github.io/eveningmares/)
+### [Demo](https://lameesaf.github.io/Eveningmares/)
